@@ -49,17 +49,6 @@ angular.module('mcmun.controllers',[])
   };
 })
 
-.controller('SocialCtrl', function($scope, $stateParams, $http) {
-  $scope.content = "";
-  $scope.showLoading();
-  $http.get('http://mcmun.livewallstream.com/').success(function(data) {
-    $scope.content = data;
-    $scope.hideLoading();
-    console.log($scope.content);
-  });
-  $scope.title = $stateParams.title;
-})
-
 .controller('PDFCtrl', function($scope, $stateParams, $http) {
   $scope.content = "";
   $scope.showLoading();
